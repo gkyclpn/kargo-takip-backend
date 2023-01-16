@@ -1,0 +1,13 @@
+[Unit]
+Description=kargotakip backend service
+
+[Service]
+Environment=PATH=/usr/bin:/usr/local/bin
+User=root
+Group=nogroup
+WorkingDirectory=/usr/local/kargo-takip-backend
+ExecStart=/home/gokayckunduzapp/.nvm/versions/node/v19.4.0/bin/node /usr/local/kargo-takip-backend/src/server.js
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
