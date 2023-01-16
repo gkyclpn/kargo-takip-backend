@@ -187,7 +187,7 @@ exports.getTrendyolMessages = async (req, res) => {
             })
           }
           let responseObj = {
-            'kargos': lastStatusOfKargos
+            kargos: lastStatusOfKargos
           }
           res.status(200).send(responseObj)
     }
@@ -330,7 +330,7 @@ exports.getTrendyolYemekMessages = async (req, res) => {
             })
           }
           let responseObj = {
-            'kargos': lastStatusOfKargos
+            kargos: lastStatusOfKargos
           }
           res.status(200).send(responseObj)
     }
@@ -474,7 +474,7 @@ exports.getHepsiburadaMessages = async (req, res) => {
             })
           }
           let responseObj = {
-            'kargos': lastStatusOfKargos
+            kargos: lastStatusOfKargos
           }
           res.status(200).send(responseObj)
     }
