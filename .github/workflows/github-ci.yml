@@ -10,7 +10,7 @@ jobs:
     env:
       PKG_VERSION: ${{ github.sha }}
       PROJECT_PATH: /usr/local/kargo-takip-backend
-      SERVICE_PATH: /etc/systemd/system
+      SERVICE_PATH: /lib/systemd/system
     steps:
       - uses: actions/checkout@v3
       - name: echo
