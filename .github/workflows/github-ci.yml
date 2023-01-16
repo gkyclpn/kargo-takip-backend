@@ -24,8 +24,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           envs: PKG_VERSION, PROJECT_PATH, SERVICE_PATH
           script: |
-            cmp --silent $GITHUB_WORKSPACE/kargotakip.service $SERVICE_PATH/kargotakip.service || sudo cp -rf $GITHUB_WORKSPACE/kargotakip.service $SERVICE_PATH;sudo systemctl daemon-reload
-            sudo cp -rf $GITHUB_WORKSPACE/. $PROJECT_PATH
+            cmp --silent $GITHUB_WORKSPACE/kargotakip.service $SERVICE_PATH/kargotakip.service || sudo cp -rf ${{ github.workspace }}/kargotakip.service $SERVICE_PATH;sudo systemctl daemon-reload
+            sudo cp -rf ${{ github.workspace }}/. $PROJECT_PATH
             sudo rm -rf $PROJECT_PATH/.git;sudo rm -rf $PROJECT_PATH/kargotakip.service;
             cd $PROJECT_PATH;sudo npm install
             sudo chown -R support:support $PROJECT_PATH
