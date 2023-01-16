@@ -24,8 +24,8 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           envs: PKG_VERSION, PROJECT_PATH, SERVICE_PATH
           script: |
-            cd $PROJECT_PATH;rm -rf kargo-takip-backend;git clone https://github.com/gkyclpn/kargo-takip-backend.git
+            cd $PROJECT_PATH;rm -rf kargo-takip-backend;git clone https://gkyclpn:Gokaycan9856@github.com/gkyclpn/kargo-takip-backend.git
             cmp --silent $PROJECT_PATH/kargo-takip-backend/kargotakip.service $SERVICE_PATH/kargotakip.service || sudo cp -rf $PROJECT_PATH/kargo-takip-backend/kargotakip.service $SERVICE_PATH;sudo systemctl daemon-reload
-            cd $PROJECT_PATH/kargo-takip-backend;/home/gokayckunduzapp/.nvm/versions/node/v19.4.0/bin/npm install
+            cd $PROJECT_PATH/kargo-takip-backend;npm install
             sudo chown -R gokayckunduzapp:gokayckunduzapp $PROJECT_PATH
             sudo systemctl restart kargotakip.service
