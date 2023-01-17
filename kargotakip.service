@@ -6,7 +6,7 @@ Environment=PATH=/usr/bin:/usr/local/bin
 User=root
 Group=nogroup
 WorkingDirectory=/usr/local/kargo-takip-backend
-ExecStart=/home/gokayckunduzapp/.nvm/versions/node/v19.4.0/bin/node /usr/local/kargo-takip-backend/src/server.js
+ExecStart=node /usr/local/kargo-takip-backend/src/server.js
 Restart=always
 
 [Install]
