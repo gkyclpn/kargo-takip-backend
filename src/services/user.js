@@ -148,7 +148,6 @@ exports.getKargosList = async (req, res) => {
         if (kargos) {
             kargos.map((kargo) => {
                 kargosArray.push({
-                    id: kargo.id,
                     status: kargo.status,
                     company: kargo.company,
                     store: kargo.store,
