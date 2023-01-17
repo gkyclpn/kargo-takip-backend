@@ -125,8 +125,8 @@ exports.getUserList = async (req, res) => {
                     name: user.name,
                     gmail: user.gmail,
                     gmail_user_id: user.gmail_user_id,
-                    access_token: user.data.access_token,
-                    refresh_token: user.data.refresh_token
+                    access_token: user.access_token,
+                    refresh_token: user.refresh_token
                 })
             })
             console.log(responseObj)
