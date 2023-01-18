@@ -5,7 +5,6 @@ const trendyolYemek = require('./services/trendyolYemek')
 const hepsiburada = require('./services/hepsiburada')
 
 router.post('/kargotakip/user/login', user.login)
-router.post('/kargotakip/user/refresh', user.refresh)
 router.get('/kargotakip/user/get', user.getUserList)
 router.post('/kargotakip/user/getKargos', user.getKargosList)
 router.post('/kargotakip/user/getTrendyolMessages', trendyol.getTrendyolMessages)

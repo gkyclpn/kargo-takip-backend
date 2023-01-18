@@ -24,9 +24,6 @@ const tableColumns = {
     access_token: {
         type: DataTypes.STRING(300)
     },
-    refresh_token: {
-        type: DataTypes.STRING(300)
-    },
     isDelete: {
         type: DataTypes.BOOLEAN,
         defaultValue: false
