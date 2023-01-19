@@ -26,6 +26,6 @@ jobs:
           script: |
             cd $PROJECT_PATH;git checkout - *;git checkout main;git pull origin main
             cmp --silent $PROJECT_PATH/kargotakip.service $SERVICE_PATH/kargotakip.service || sudo cp -rf $PROJECT_PATH/kargotakip.service $SERVICE_PATH;sudo systemctl daemon-reload
-            cd $PROJECT_PATH;npm install
+            cd $PROJECT_PATH;/home/kargotakip/.nvm/versions/node/v17.5.0/bin/npm install
             sudo chown -R kargotakip:kargotakip $PROJECT_PATH
             sudo systemctl restart kargotakip.service
