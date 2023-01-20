@@ -7,7 +7,8 @@ User=root
 Group=nogroup
 WorkingDirectory=/usr/local/kargo-takip-backend
 ExecStart=/root/.nvm/versions/node/v19.4.0/bin/node /usr/local/kargo-takip-backend/src/server.js
-Restart=always
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target
