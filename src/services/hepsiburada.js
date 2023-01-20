@@ -9,7 +9,6 @@ exports.getHepsiburadaMessages = async (req, res) => {
         const { body } = req
         let responseObj = null
         const user = await userR.one({id: body.id})
-        console.log(user)
         const gmail = google.gmail({version: 'v1', 
             headers: {
                 "Authorization": `Bearer ${user.access_token}`,
