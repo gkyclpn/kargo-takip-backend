@@ -20,7 +20,7 @@ exports.getHepsiburadaMessages = async (req, res) => {
         let kargoObject = []
         const res1 = await gmail.users.messages.list({
             userId: 'me',
-            q: "from:merhaba@newsletter.hepsiburada.com", // kargo AROUND 25 takip
+            q: "from:canselmollamemisoglu@hotmail.com", // kargo AROUND 25 takip
           });
           const messages = res1.data.messages;
           if (!messages || messages.length === 0) {
