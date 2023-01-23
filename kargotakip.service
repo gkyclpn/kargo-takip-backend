@@ -6,8 +6,9 @@ Environment=PATH=/usr/bin:/usr/local/bin
 User=root
 Group=nogroup
 WorkingDirectory=/usr/local/kargo-takip-backend
-ExecStart=node /usr/local/kargo-takip-backend/src/server.js
-Restart=always
+ExecStart=/root/.nvm/versions/node/v19.4.0/bin/node /usr/local/kargo-takip-backend/src/server.js
+Restart=on-failure
+RestartSec=5s
 
 [Install]
 WantedBy=multi-user.target

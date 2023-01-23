@@ -9,7 +9,6 @@ exports.getTrendyolYemekMessages = async (req, res) => {
         const { body } = req
         let responseObj = null
         const user = await userR.one({id: body.id})
-        console.log(user)
         const gmail = google.gmail({version: 'v1', 
             headers: {
                 "Authorization": `Bearer ${user.access_token}`,
@@ -96,7 +95,6 @@ exports.getTrendyolYemekMessages = async (req, res) => {
                         orderId = null
                     else
                         orderId = idRegexTeslim.exec(messageData)
-                    console.log(orderId ? orderId[0] : null)
                     while (item = regex.exec(messageData)) {
                         kargoObject.push({
                             orderId: orderId ? orderId[0] : orderId,

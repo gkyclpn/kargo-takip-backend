@@ -27,5 +27,5 @@ jobs:
             cd $PROJECT_PATH;git checkout - *;git checkout main;git pull origin main
             cmp --silent $PROJECT_PATH/kargotakip.service $SERVICE_PATH/kargotakip.service || sudo cp -rf $PROJECT_PATH/kargotakip.service $SERVICE_PATH;sudo systemctl daemon-reload
             cd $PROJECT_PATH;npm install
-            sudo chown -R gokayckunduzapp:gokayckunduzapp $PROJECT_PATH
+            sudo chown -R root:root $PROJECT_PATH
             sudo systemctl restart kargotakip.service
